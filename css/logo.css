@@ -1,0 +1,135 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,hr,ul,ol,td,input,option,textarea{
+	margin:0;
+	padding:0;
+}
+body{
+    font-family: "微软雅黑";
+    background-color: white opacity .5;
+   
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+}
+/* 主要内容 */
+.logo{
+    width: 662px;
+    height: 410px;
+    background-color:whitesmoke;
+    margin:auto  auto;
+}
+.Lclose{
+     width: 662px;
+     height: 20px;
+}
+#LoIn{
+    width: 40px;
+    height: 20px;
+    display: block;
+    /* background-color: thistle; */
+    float: right;
+}
+
+.Lo-F{
+    width: 618px;
+    height: 250px;
+    padding-top: 10px;
+    /* background-color: wheat; */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lo-p{
+    width: 618px;
+    height: 60px;
+    text-align: center;
+}
+.lo-p p{
+    width: 618px;
+    height: 20px;
+    display: block;
+    margin-top: 10px;
+}
+.lo-p a{
+    color: skyblue;
+}
+.lo-p a:hover{
+    text-decoration: underline;
+}
+.LIn{
+    width: 268px;
+    height: 120px;
+    display: flex;
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.LIn input{
+    display: block;
+    width: 268px;
+    height: 38px;
+    margin-top: 10px;
+}
+#LoG{
+    background-color: rgb(101, 184, 101);
+    font-size: 16px;
+    font-weight: bold;
+}
+.LIn .Num{
+    width: 268px;
+    height: 38px;
+    display: flex;
+   align-items: center;
+    /* background-color: cyan; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.LIn #code{
+    width: 168px;
+    height: 38px;
+}
+.LIn #codeSpan{
+    display: block ;
+    width: 100px;
+    height: 38px;
+    background-color: cornflowerblue;
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+    margin-top: 10px;
+    /* float: left; */
+}
+.loend{
+    width: 618px;
+    height: 20px;
+    /* background-color: violet; */
+    margin-top: 105px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+}
+.loend a{
+    width: 60px;
+    height: 20px;
+    display: inline-block;
+    font-size: 12px;
+    border-right:1px solid #bfbfbf ;
+    text-align: center;
+    color: #000;
+}
+.loend a:last-child{
+    border-right:none ;
+}
+.loend a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,357 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+	</head>
+	<style type="text/css">
+		body,
+		p,
+		···· ul,
+		ol,
+		dl,
+		dd,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		hr,
+		td,
+		input,
+		textarea {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul,
+		ol {
+			list-style: none;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		img {
+			border: 0;
+		}
+
+		body {
+			font-family: "微软雅黑";
+		}
+
+		/* box--轮播图 */
+		.bigbox {
+			width: 100%;
+			height:647px;
+		}
+
+		.firstA {
+			position: absolute;
+			z-index: 100;
+			top: 15px;
+			left: 30px;
+		}
+        .firstA img{
+			width: 35px;
+			height: 40px ;
+		}
+		.firstA p {
+			display: inline-block;
+			color: #000000;
+			font-size: 32px;
+			position: absolute;
+			padding-left: 10px;
+		}
+
+		#box {
+			width: 480px;
+			height: 647px;
+			background-size: 100% 100%;
+			float: left;
+		}
+		.libox {
+			width: 480px;
+			height: 637px;
+			text-align: center;
+			position: fixed;
+		}
+
+		.reg {
+			width:723px;
+			float: right;
+			overflow: hidden;
+		}	
+		.lh{
+			margin-left:330px;
+		}
+		.lh img{
+			position: relative;
+			top:5px;
+			left:-2px;
+		}
+	
+		.lh a{
+			
+			height:40px;
+			background: red;
+			color:white;
+			border-radius: 5px;
+			text-align: center;
+		}
+		.lh p{
+			display:inline-block;
+			width:70px;
+			text-align: center;
+		}
+		h1{
+			font-size: 42px;
+			font-weight:500;
+			margin-left:130px;
+		}
+		h3{
+			font-size: 30px;
+			font-weight:500;
+			margin-left:130px;
+			margin-top:20px;
+		}
+
+		.reg_one {
+			text-align: center;
+			margin-top:50px;
+		}
+		#username{
+			width: 480px;
+			height:50px;
+			border-radius:5px;
+			border: 1px solid #333333;
+			font-size: 20px;
+			font-weight: 100;
+		}
+		#userPass{
+			margin-top:40px;
+			width: 480px;
+			height:50px;
+			border-radius:5px;
+			border: 1px solid #333333;
+			font-size: 20px;
+			font-weight: 100;
+		}
+		#btnLogin{
+			margin-top:70px;
+			width: 480px;
+			height:70px;
+			border-radius:5px;
+			background: #007AFF;
+			outline: none;
+			font-size: 28px;
+			font-weight: 100;
+			color: white;
+		}
+		.ty{
+			height:30px;
+			margin-top:50px;
+			margin-left: -190px;
+			
+		}
+		.input1{
+			position: relative;
+			top:2px;
+		}
+		.ty span{
+			height:20px;
+			display: inline-block;
+			font-size: 14px;
+			margin-top:-10px;
+			color:gray;
+			
+		}
+		.p1{
+			font-size: 14px;
+			color: gray;
+			margin-top:30px;
+		}
+		.a8{
+			margin-top:10px;
+			background-color: #007AFF;
+			width:30px;
+			color:black;
+			font-size:14px;
+		}
+	</style>
+	<body>
+		<div class="bigbox">
+			<a class="firstA" href="#"><img src="img/logo2x.png" width="40px" height="45px">
+				<p>QQ</p>
+			</a>
+			
+			<div id="box">
+				<p id="btn1"></p>
+				<p id="btn2"></p>
+				<div class="libox">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			<div class="reg">
+				<div class="lh">
+					<a href="#"><img src="img/logo3.png"><p>QQ靓号</p></a>	
+				</div>
+				<h1>欢迎注册QQ</h1>
+				<h3>每一天，乐在沟通。</h3>
+				<div class="reg_one">
+					<input id="username" placeholder="    昵称" type="text" /><span id="showUser"></span><br />
+					<input id="userPass" placeholder="    密码" type="password" /><span id="showPass"></span><br />
+					<input id="btnLogin" type="button" value="登录" />
+					<div id="messageBox">
+						<a class="a8" href="reg.html">快速注册</a>
+					<div class="ty">
+						<input class="input1" type="checkbox" checked="">
+						<span>我已阅读并同意相关服务条款和隐私政策</span>
+					</div>
+					<p class="p1">Copyright © 1998-2020Tencent All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script  src="js/jquery-3.2.1.min.js"></script>
+<script  src="js/cookieTools.js"></script>
+<script>
+	$(function(){		
+		$("#btnLogin").click(function(){
+			//1、
+			$.post(
+				"php/login.php",
+				{
+					"username":$("#username").val(),
+					"userPass":$("#userPass").val()
+				},
+				function(data){					
+					if(data=="success"){//登录成功！
+						$("#messageBox").html("<a href='home.html'></a>");
+						//记录cookie
+						saveCookie("username",$("#username").val(),7);
+						setTimeout(()=>{						
+							location.href="home.html";	
+						},1000);
+					}else{
+						$("#messageBox").html("登录失败，用户名或者密码不对！");
+					}
+				}
+			);
+		});
+	});
+	
+	
+	//轮播图
+	class Rotationchart {
+		constructor(box, li) {
+			this.obox = box;
+			this.oli = li;
+			this.index = 0;
+		}
+		设置背景图
+		setbackgroundImg() {
+			this.obox.style.backgroundImage = this.index == 4 ? "url(Imgs/" + this.index + ".gif)" : "url(Imgs/" + this.index +
+				".jpg)"
+		}
+		设置li背景
+		setlibackgroundClor() {
+			for (let i = 0; i < oli.length; i++) {
+				if (i == this.index) {
+					this.oli[i].style.backgroundColor = "orange";
+					this.oli[i].style.opacity = "1";
+	
+				} else {
+					this.oli[i].style.backgroundColor = "#f5f5f5";
+					this.oli[i].style.opacity = "20%";
+				}
+			}
+		}
+		设置下一个按钮
+		setnextbtn() {
+			this.index++;
+	
+			if (this.index > oli.length - 1) {
+				this.index = 0;
+			}
+			this.setbackgroundImg()
+			this.setlibackgroundClor()
+		}
+		//设置上一个按钮
+		setshangbtn() {
+			this.index--;
+			if (this.index < 0) {
+				this.index = oli.length
+			}
+			this.setbackgroundImg()
+			this.setlibackgroundClor()
+		}
+	
+		//点击btn
+		btnevent() {
+			let btn1 = document.getElementById("btn1")
+			let btn2 = document.getElementById("btn2")
+	
+			let that = this;
+			btn1.onclick = function() {
+				that.setshangbtn()
+			}
+	
+			btn2.onclick = function() {
+				that.setnextbtn()
+			}
+	
+		}
+	
+		//绑定li
+	
+		getoli() {
+			let that = this;
+			for (let i = 0; i < oli.length; i++) {
+				this.oli[i].onclick = function() {
+					that.index = i;
+					that.setbackgroundImg();
+					that.setlibackgroundClor();
+				}
+				this.oli[i].onmouseover = function() {
+					that.index = i;
+					that.setbackgroundImg();
+					that.setlibackgroundClor();
+				}
+			}
+		}
+		//添加定时器
+		dingshi() {
+			let that = this;
+			let time = null;
+			time = setInterval(function() {
+				that.setnextbtn()
+			}, 4000)
+	
+			this.obox.onmouseover = function() {
+				clearInterval(time)
+			}
+			this.obox.onmouseout = function() {
+				that.dingshi()
+			}
+		}
+	}
+	let obox = document.getElementById("box");
+	let oli = document.getElementsByTagName("li");
+	
+	let a = new Rotationchart(obox, oli);
+	a.setbackgroundImg();
+	a.setlibackgroundClor();
+	a.btnevent();
+	a.getoli();
+	a.dingshi();
+	
+</script>

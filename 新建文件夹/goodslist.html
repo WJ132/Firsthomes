@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            width: 1000px;            
+        }
+        li{
+            float: left;
+            margin-left: 20px;
+            width: 220px;
+            height: 300px;
+            border:1px solid black;
+            text-align: center;
+
+        }
+        li img{
+            width:80%;            
+        }
+
+    </style>
+</head>
+<body>
+        <span id="jiadian">家电</span>&nbsp;&nbsp;&nbsp;
+        <span id="wenju">文具</span><hr>
+    <ul id="box">
+        
+    </ul>
+</body>
+</html>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+
+function getGoodslist(typeId){
+    let data = {};
+    if(typeId){
+        data.typeId = typeId;
+    }
+    $.get("php/getGoodsList.php",data,
+        function(data){
+        let htmlStr = "";
+        data.forEach(goods => {
+            htmlStr +=`
+                <li>
+                    <h2>${goods.goodsName}</h2>
+                    <a href="goodsdetail.html?goodsId=${goods.goodsId}"><img src="${goods.goodsImg}" alt=""></a>
+                    <p>¥ ${goods.goodsPrice}</p>
+                    <p>${goods.goodsCount}</p>
+                </li>
+            `;
+        });
+        $("#box").html(htmlStr);
+    },"json");
+}
+
+
+$(function(){
+    getGoodslist();
+    $("#jiadian").click(function(){
+        getGoodslist('003')
+    });
+    $("#wenju").click(function(){
+        getGoodslist('001')
+    });
+})
+
+
+</script>

@@ -1,0 +1,287 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,hr,ul,ol,td,input,option,textarea{
+	margin:0;
+	padding:0;
+}
+body{
+    font-family: "微软雅黑";
+    
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+}
+/* header{
+    width: 1280px;
+    height: 156px;
+    background-color: blueviolet;
+} */
+.header{
+	width: 100%;
+	height: 100%;
+	background-color: #0e0e0f;
+}
+.box1{
+	width:1280px;
+	height:100px;
+	margin:auto;
+	border-bottom: 1px solid #222222;
+	background-color: #0e0e0f;
+	overflow: hidden;
+}
+.box1 .logo{
+	width:355px;
+	height:100px;
+	float: left;
+}
+.box1 .icon-ss{
+	padding-left:10px;
+	font-size: 20px;
+	font-weight:800;
+	color:#aaaaaa;
+	float:left;
+}
+.box1 .sousuo{
+	width:240px;
+	height:40px;
+	background-color:#242424;
+	border-radius: 25px;
+	float:left;
+	line-height: 40px;
+	margin-top:40px;
+	margin-left:420px;
+	
+}
+.icon-ss .sousuo_one{
+	vertical-align: middle;
+	border: none;
+	color: #aaaaaa;
+	background-color: #242424;
+	font-size: 14px;
+	outline: none;
+	overflow: hidden;
+	margin-top:-5px;
+}
+
+.denglu{
+	width:124px;
+	height:60px;
+	float: left;
+	margin-top:45px;
+	margin-left:55px;
+	
+}
+.denglu .icon-yh{
+	font-size: 26px;
+	color:#FFFFFF;
+}
+.denglu a{
+	display: block;
+	margin-top:10px;
+	margin-left:30px;
+	font-size: 14px;
+	color:#FFFFFF;
+}
+.gouwuche{
+	float:left;
+	padding-top:45px;
+}
+.gouwuche .icon-gwc{
+	font-size:24px;
+	color:white;
+	margin-left:2px;
+
+}
+.gouwuche span{
+	color:#ffc923;
+}
+.gouwuche p{
+	display: inline-block;
+	color:white;
+	font-size: 14px;
+	padding-left:7px;
+}
+/* 产品分类 */
+.box2{
+	width:1280px;
+	height:63px;
+	background-color: #0e0e0f;
+	margin: 0 auto;
+}
+.box2_one  a{
+	display:inline-block;
+	width:129px;
+	height:58px;
+	color:#a6a6a6;
+	line-height:55px;
+	text-align: center;;
+}
+.box2_one{
+	float:left;
+}
+.box2_one a:hover {
+	border-bottom: 4px solid #efc34f;
+	background: #252017;
+}
+.box2_two{
+	width:129px;
+	height:58px;
+	float:right;
+}
+.box2_two .a3{
+	color:#FFFFFF;
+	line-height:55px;
+}
+.box3{
+	width:1280px;
+	background-color:white;
+	z-index: 10000;
+	position:absolute;
+	left: 0;
+	display: none;
+	top:163px;
+}
+.box2_two:hover .box3{
+	display: block;
+}
+
+.box3 .fenlei{
+	float:left;
+	width:80px;
+	margin-left:20px;
+	text-align: center;
+}
+.fenlei1{
+	padding-left:140px;
+}
+.fenlei .a2{
+	margin-top:13px;
+}
+.fenlei .a1{
+	display: block;
+	font-size:14px;
+	padding-top:10px;
+	color:#333333;
+}
+.fenlei span:hover{
+	border-bottom:1px solid #333333;
+}
+
+.fenlei img{
+	padding:25px 0 15px 0;
+}
+.fenlei p{
+	border-bottom:4px solid #e3e3e3;
+	font-weight: 800;
+	font-size: 16px;
+	color:#333333;
+	padding-bottom:8px;
+}
+
+.TopF{
+    width: 1280px;
+    height: 50px;
+    background-color: chartreuse;
+    font-size: 14px;
+    display: flex;
+   align-items: center;
+}
+.TopF a{
+    width: 40px;
+    height: 18px;
+    /* display: inline-block; */
+    text-align: center;
+    line-height: 18px;   
+}
+.TopF span{
+    width: 30px;
+    height: 18px;
+    /* display: inline-block; */
+    text-align: center;
+    /* float: left; */
+    line-height: 18px;
+    margin-left: 5px;   
+}
+.shoplist{
+    width: 1280px;
+    height: 117px;
+    background-color: chocolate;
+    font-size: 14px;
+}
+.fen-list{
+    width: 1180px;
+    height: 53px;
+    background-color: cornflowerblue;
+    border-bottom:1px solid #eee ;
+    margin:0  auto;
+    text-align: center;
+    
+}
+.ping-list{
+    width: 1180px;
+    height: 53px;
+    background-color: cornflowerblue;
+    /* border-bottom:1px solid #eee ; */
+    margin:0 auto;
+}
+.fen-list dt{
+    float: left;
+    text-align: center;
+    line-height: 53px;
+
+}
+.fen-list dd{
+    float: left;
+   line-height: 53px;
+   padding: 0 20px;
+   cursor:pointer;
+}
+.ping-list dt{
+    float: left;
+    text-align: center;
+    line-height: 53px;
+
+}
+.ping-list dd{
+    float: left;
+   line-height: 53px;
+   padding: 0 20px;
+   cursor:pointer;
+}
+.goodslist{
+    width: 1280px;
+	height: 1292px;
+
+}
+.goodslist .googs{
+	margin-left: 40px;
+	margin-top: 30px;
+    width: 1208px;
+    height: auto;  
+}
+.goodslist .googs li{
+	margin: 0 10px 20px;
+     display: block;
+	 float: left;
+	 width: 280px;
+	 height: 356px;
+	 border: 1px solid #eee;
+	 -webkit-transition: all .2s linear;
+	 transition: all .2s linear;
+	 text-align: center;
+}
+.goodslist li img{
+	width:280px;
+	height: 268px;
+}
+  .goodp{
+	font-weight: bolder;
+	color: red;
+}
+.googs li:hover {
+	box-shadow: 0 5px 5px gray;
+}
