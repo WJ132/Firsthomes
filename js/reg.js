@@ -21,13 +21,13 @@ function isUserName(){
 //2、密码的前端验证
 function isPass(){
 	//1)、非空判断
-	if($("#userpass").val()==""){
+	if($("userpass").val()==""){
 		return false;
 	}
 	//2)、格式判断
 	// 数字，6-16位
 	let reg = /^\d{6,16}$/;
-	if(!reg.test($("#userpass").val())){
+	if(!reg.test($("userpass").val())){
 		return false;
 	}
 	return true;
@@ -61,13 +61,13 @@ $(function(){
 			hasUserBack();
 		});	
 
-		$("#userpass").blur(function(){
+		$("userpass").blur(function(){
 			//1、前端验证
 			if(isPass()==false){
-				$("#showPass").html("亲，密码格式不正确	！");
+				$("#showpass").html("亲，密码格式不正确	！");
 				return;
 			}else{
-				$("#showPass").html("√");
+				$("#showpass").html("√");
 			}
 		});
 
@@ -86,7 +86,7 @@ $(function(){
 				"../php/addUser.php",
 				{
 					"username":$("#username").val(),
-					"userpass":$("#userpass").val()
+					"userpass":$("userpass").val()
 				},
 				function(data){
 					if(data=="success"){

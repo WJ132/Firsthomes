@@ -1,6 +1,5 @@
 <?php
-	header("content-type","text/html;charset=utf-8");
-	
+	header("content-type","text/html;charset=utf-8");	
 	//1接收数据
 	$username = $_POST["username"];
 	$userPass = $_POST["userpass"];

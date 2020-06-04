@@ -22,7 +22,7 @@
 	
 	$result=mysql_query($sqlstr,$conn);	
 	//4）、关闭连接（拆桥）
-	mysql_close($conn);
+	mysql_close($con);
 	
 	if(!$result){
 		die("添加失败".mysql_error());

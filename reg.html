@@ -125,16 +125,16 @@
 		}
 		#username{
 			width: 480px;
-			height:50px;
+			height:40px;
 			border-radius:5px;
 			border: 1px solid #333333;
 			font-size: 20px;
 			font-weight: 100;
 		}
-		#userPass{
+		#userpass{
 			margin-top:40px;
 			width: 480px;
-			height:50px;
+			height:40px;
 			border-radius:5px;
 			border: 1px solid #333333;
 			font-size: 20px;
@@ -200,7 +200,7 @@
 				<h3>每一天，乐在沟通。</h3>
 				<div class="reg_one">
 					<input id="username" placeholder="    昵称" type="text" /><br /><span id="showUser"></span><br/>
-					<input id="userPass" placeholder="    密码" type="password" /><br /><span id="showPass"></span><br/>
+					<input id="userpass" placeholder="    密码" type="password" /><br /><span id="showUser"></span><br/>
 					<input id="btnReg" type="button" value="立即注册" />
 					<div id="messageBox">
 					<div class="ty">
@@ -220,21 +220,21 @@
 
 	</body>
 </html>
-<script  src="../js/jquery-3.2.1.min.js"></script>
-<script src="../js/reg.js"></script>
+<script  src="js/jquery-3.2.1.min.js"></script>
+<script src="js/reg1.js"></script>
 <script type="text/javascript">
 	// $(function() {
 	// 	//验证用户名是否存在
 	// 	$("#username").blur(function() {
 	// 		$.get(
-	// 			"../php/checkUser.php", {
+	// 			"php/checkUser.php", {
 	// 				"username": $("#username").val()
 	// 			},
 	// 			function(data) {
 	// 				if (data == "1") {
-	// 					$("#showUser").html("√");
+	// 					$("#showUser").html("格式正确");
 	// 				} else {
-	// 					$("#showUser").html("×");
+	// 					$("#showUser").html("格式错误");
 	// 				}
 	// 			}
 	// 		);
@@ -243,9 +243,9 @@
 	// 	$("#btnReg").click(function() {
 	// 		//1、1111
 	// 		$.post(
-	// 			"../php/login.php", {
+	// 			"php/login.php", {
 	// 				"username": $("#username").val(),
-	// 				"userpass": $("#userPass").val()
+	// 				"userpass": $("#userpass").val()
 	// 			},
 	// 			function(data) {
 	// 				if (data == "success") {

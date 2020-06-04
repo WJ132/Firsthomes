@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,hr,ul,ol,td,input,option,textarea{
+	margin:0;
+	padding:0;
+}
+body{
+    font-family: "微软雅黑";
+    background-color: #dad3d3;
+    
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+}
+.header{
+	width: 100%;
+	height: 100%;
+	background-color: #0e0e0f;
+}
+.box1{
+	width:1280px;
+	height:100px;
+	margin:auto;
+	border-bottom: 1px solid #222222;
+	background-color: #0e0e0f;
+	overflow: hidden;
+}
+.box1 .logo{
+	width:355px;
+	height:100px;
+	float: left;
+}
+.box1 .icon-ss{
+	padding-left:10px;
+	font-size: 20px;
+	font-weight:800;
+	color:#aaaaaa;
+	float:left;
+}
+.box1 .sousuo{
+	width:240px;
+	height:40px;
+	background-color:#242424;
+	border-radius: 25px;
+	float:left;
+	line-height: 40px;
+	margin-top:40px;
+	margin-left:420px;
+	
+}
+.icon-ss .sousuo_one{
+	vertical-align: middle;
+	border: none;
+	color: #aaaaaa;
+	background-color: #242424;
+	font-size: 14px;
+	outline: none;
+	overflow: hidden;
+	margin-top:-5px;
+}
+
+.denglu{
+	width:124px;
+	height:60px;
+	float: left;
+	margin-top:45px;
+	margin-left:55px;
+	
+}
+.denglu .icon-yh{
+	font-size: 26px;
+	color:#FFFFFF;
+}
+.denglu a{
+	display: block;
+	margin-top:10px;
+	margin-left:30px;
+	font-size: 14px;
+	color:#FFFFFF;
+}
+.gouwuche{
+	float:left;
+	padding-top:45px;
+}
+.gouwuche .icon-gwc{
+	font-size:24px;
+	color:white;
+	margin-left:2px;
+
+}
+.gouwuche span{
+	color:#ffc923;
+}
+.gouwuche p{
+	display: inline-block;
+	color:white;
+	font-size: 14px;
+	padding-left:7px;
+}
+/* 产品分类 */
+.box2{
+	width:1280px;
+	height:63px;
+	background-color: #0e0e0f;
+	margin: 0 auto;
+}
+.box2_one  a{
+	display:inline-block;
+	width:129px;
+	height:58px;
+	color:#a6a6a6;
+	line-height:55px;
+	text-align: center;;
+}
+.box2_one{
+	float:left;
+}
+.box2_one a:hover {
+	border-bottom: 4px solid #efc34f;
+	background: #252017;
+}
+.box2_two{
+	width:129px;
+	height:58px;
+	float:right;
+}
+.box2_two .a3{
+	color:#FFFFFF;
+	line-height:55px;
+}
+.box3{
+	width:1280px;
+	background-color:white;
+	z-index: 10000;
+	position:absolute;
+	left: 0;
+	display: none;
+	top:163px;
+}
+.box2_two:hover .box3{
+	display: block;
+}
+
+.box3 .fenlei{
+	float:left;
+	width:80px;
+	margin-left:20px;
+	text-align: center;
+}
+.fenlei1{
+	padding-left:140px;
+}
+.fenlei .a2{
+	margin-top:13px;
+}
+.fenlei .a1{
+	display: block;
+	font-size:14px;
+	padding-top:10px;
+	color:#333333;
+}
+.fenlei span:hover{
+	border-bottom:1px solid #333333;
+}
+
+.fenlei img{
+	padding:25px 0 15px 0;
+}
+.fenlei p{
+	border-bottom:4px solid #e3e3e3;
+	font-weight: 800;
+	font-size: 16px;
+	color:#333333;
+	padding-bottom:8px;
+}
+
+
+.charbox{
+    width: 1280px;
+    height: 300px;
+    background-color:white;
+   }
+   .chartab{
+          width: 100%;
+          height: 300px;
+          /* border:1px solid black ; */
+          margin-top: 50px;
+   }
+   .chartab tr{
+        width: 100%;
+       height: 60px;
+       display: block;
+       float: left;
+       margin-left: auto;
+       text-align: center;
+       /* border:1px solid black ; */
+      
+   }
+   .chartab td{
+       width: 120px;
+       height: 26px;
+       display: block;
+       float: left;
+       margin-left: 10px;
+       /* border:1px solid black ; */
+       color: #666666;
+       margin-top: auto;
+   }
+   .chartab td img{
+       width: 60px;
+       height: 55px;
+       display: block;
+       border:1px solid  #e3e3e3;
+   }
+   .chartab td:nth-child(3){
+       width: 280px;
+       height: 26px;
+       display: flex;
+        justify-content: center;
+        align-items: center;
+   }
+   .chartab td span{
+       margin-right: 10px;
+   }
+   .footer{
+	width:1280px;
+	height:100%;
+	background:#f5f5f5;
+	padding-top:40px;
+}
+.footer_one{
+	width:1280px;
+	height: 232px;
+	background: #1b1b1b;
+	overflow: hidden;
+	border-bottom: 1px solid #606060;
+}
+.div1{
+	width:213px;
+	border-right:1px solid #606060;
+	margin:40px 0 0 50px;
+	padding-right: 20px;
+	float:left;
+}
+.div1 .a5{
+	padding:23px 0 0 69px;
+}
+.div1 a{
+	display: block;
+}
+.div2{
+	margin:40px 0 0 35px;
+	padding-right: 20px;
+	float:left;
+}
+.div2 a{
+	display: block;
+	color:#a8a8a8;
+	font-size: 14px;
+	
+	
+}
+.div2 span{
+	color:#eed1a2;
+	margin-right:5px;
+	font-size: 30px;
+	line-height: 50px;
+	vertical-align: middle;
+}
+.div3{
+	width:140px;
+	height:135px;
+	margin:40px 0 0 85px;
+	padding-right: 20px;
+	float:left;
+	border-right:1px solid #606060;
+}
+.div4 img{
+	width: 100px;
+	height: 100px;
+	padding-bottom: 15px;
+}
+.div4 a{
+	display: inline-block;
+	color:#FFFFFF;
+	padding-left:80px;
+	text-align: center;
+}
+.div4{
+	margin:50px 0 0 85px;
+}
+
+.footer_two{
+	width:1280px;
+	background: #1b1b1b;
+	text-align: center;
+	/* padding-bottom: 30px; */
+}
+.div5{
+	padding-top:30px;
+}
+.div5 a{
+	font-size: 12px;
+	color:#777777 ;
+}
+.footer_two p{
+	padding-top:6px;
+	font-size: 12px;
+	color:#777777 ;
+}
+.div6 .a6{
+	font-size: 12px;
+	color:#777777 ;
+}
+.div6 .a6:hover{
+	color:#FFFFFF;
+}
+.div6{
+	padding:5px 0 50px 0;
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="box1">
+            <a href="#"><img class="logo" src="img/logo.png"></a>
+            <div class="sousuo">
+                <a href="#" class="iconfont icon-ss">
+                    <input class="sousuo_one" placeholder="请输入想要找的宝贝" />
+                </a>
+            </div>
+            <div class="denglu">
+                <span class="iconfont icon-yh"></span>
+                <a href="login.html">立即登录</a>
+            </div>
+            <div class="gouwuche">
+                <a href="#" class="iconfont icon-gwc">
+                    <p>购物车<span>0</span></p>
+                </a>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box2_one">
+                <a href="#">首页</a>
+                <a href="#">限时折扣</a>
+                <a href="#">聚豆抵扣</a>
+                <a href="#">定制专区</a>
+                <a href="#">聚发现</a>
+            </div>
+            <div class="box2_two">
+                <a class="a3" href="#">全部商品分类</a>
+                <div class="box3">
+                    <div class="fenlei fenlei1">
+                        <a href="#"><img src="img/fsxm.png" alt="">
+                            <p>服饰鞋帽</p>
+                        </a>
+                        <a class="a1 a2" href="#"><span>卫衣/外套</span></a>
+                        <a class="a1" href="#"><span>T恤</span></a>
+                        <a class="a1" href="#"><span>袜子</span></a>
+                        <a class="a1" href="#"><span>裤子</span></a>
+                        <a class="a1" href="#"><span>鞋子</span></a>
+                        <a class="a1" href="#"><span>帽子</span></a>
+                        <a class="a1" href="#"><span>服饰配件</span></a>
+                    </div>
+                    <div class="fenlei">
+                        <a href="#"><img src="img/fsxm.png" alt="">
+                            <p>玩具毛绒</p>
+                        </a>
+                        <a class="a1 a2" href="#"><span>公仔</span></a>
+                        <a class="a1" href="#"><span>抱枕</span></a>
+                        <a class="a1" href="#"><span>手办</span></a>
+                        <a class="a1" href="#"><span>雕塑</span></a>
+                    </div>
+                    <div class="fenlei">
+                        <a href="#"><img src="img/fsxm.png" alt="">
+                            <p>数码配件</p>
+                        </a>
+                        <a class="a1 a2" href="#"><span>手机壳</span></a>
+                        <a class="a1" href="#"><span>充电宝</span></a>
+                        <a class="a1" href="#"><span>鼠标垫/鼠标</span></a>
+                        <a class="a1" href="#"><span>U盘</span></a>
+                        <a class="a1" href="#"><span>数据线</span></a>
+                        <a class="a1" href="#"><span>打火机</span></a>
+                        <a class="a1" href="#"><span>无线充电器</span></a>
+                    </div>
+                    <div class="fenlei">
+                        <a href="#"><img src="img/fsxm.png" alt="">
+                            <p>生活用品</p>
+                        </a>
+                        <a class="a1 a2" href="#"><span>杯子</span></a>
+                        <a class="a1" href="#"><span>钥匙扣</span></a>
+                        <a class="a1" href="#"><span>伞</span></a>
+                        <a class="a1" href="#"><span>眼罩/耳罩</span></a>
+                        <a class="a1" href="#"><span>美妆个护</span></a>
+                        <a class="a1" href="#"><span>其它</span></a>
+                    </div>
+                    <div class="fenlei">
+                        <a href="#"><img src="img/fsxm.png" alt="">
+                            <p>箱包收纳</p>
+                        </a>
+                        <a class="a1 a2" href="#"><span>双肩包</span></a>
+                        <a class="a1" href="#"><span>单肩包</span></a>
+                        <a class="a1" href="#"><span>收纳包</span></a>
+                    </div>
+                    <div class="fenlei">
+                        <a href="#"><img src="img/fsxm.png" alt="">
+                            <p>首饰配饰</p>
+                        </a>
+                        <a class="a1 a2" href="#"><span>手链</span></a>
+                        <a class="a1" href="#"><span>项链</span></a>
+                        <a class="a1" href="#"><span>挂件</span></a>
+                        <a class="a1" href="#"><span>戒指</span></a>
+                        <a class="a1" href="#"><span>其它</span></a>
+                    </div>
+                    <div class="fenlei">
+                        <a href="#"><img src="img/fsxm.png" alt="">
+                            <p>文具图书</p>
+                        </a>
+                        <a class="a1 a2" href="#"><span>笔记本</span></a>
+                        <a class="a1" href="#"><span>胶带/贴纸</span></a>
+                        <a class="a1" href="#"><span>文件</span></a>
+                    </div>
+                    <div class="fenlei">
+                        <a href="#"><img src="img/fsxm.png" alt="">
+                            <p>休闲零食</p>
+                        </a>
+                        <a class="a1 a2" href="#"><span>糖/巧克力</span></a>
+                    </div>
+                    <div class="fenlei">
+                        <a href="#"><img src="img/fsxm.png" alt="">
+                            <p>海报艺术</p>
+                        </a>
+                        <a class="a1 a2" href="#"><span>画册</span></a>
+                        <a class="a1" href="#"><span>海报</span></a>
+                    </div>
+                    <div class="fenlei">
+                        <a href="#"><img src="img/fsxm.png" alt="">
+                            <p>其它</p>
+                        </a>
+                        <a class="a1 a2" href="#"><span>纪念币</span></a>
+                        <a class="a1" href="#"><span>礼盒</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="charbox">        
+        <table id="box" class="chartab">
+           
+        </table>
+    </div>
+    <!-- footer -->
+		<div class="footer">
+			<div class="footer_one">
+				<div class="div1">
+					<a href="#"><img src="../img/djc.png" ></a>
+					<a class="a5" href="#"><img src="../img/dzbs.png" alt=""></a>
+				</div>
+				<div class="div2">
+					<a href="#"><span class="iconfont icon-gwzn"></span>购物指南</a>
+					<a href="#"><span class="iconfont icon-cjcz"></span>常见操作</a>
+					<a href="#"><span class="iconfont icon-gywm"></span>关于我们</a>
+				</div>
+				<div class="div2 div3">
+					<a href="#"><span class="iconfont icon-psfs"></span>配送方式</a>
+					<a href="#"><span class="iconfont icon-shfw"></span>售后服务</a>
+				</div>
+				<div class="div4">
+					<a href="#"><img src="../img/app1.jpg" alt=""><p>聚诚品公众号</p></a>
+					<a href="#"><img src="../img/app2.jpg" alt=""><p>道聚城公众号</p></a>
+					<a href="#"><img src="../img/app3.png" alt=""><p>掌上道聚城</p></a>
+				</div>
+			</div>
+			<div class="footer_two">
+				<div class="div5">
+					<a href="#">腾讯互动娱乐 |</a>
+					<a href="#"> 服务条款|</a>
+					<a href="#"> 腾讯游戏隐私保护指引|</a>
+					<a href="#"> 腾讯游戏儿童隐私保护指引|</a>
+					<a href="#"> 广告服务 |</a>
+					<a href="#"> 腾讯游戏招聘 |</a>
+					<a href="#"> 腾讯游戏客服 |</a>
+					<a href="#"> 游戏地图 |</a>
+					<a href="#"> 成长守护平台 |</a>
+					<a href="#"> 商务合作 |</a>
+					<a href="#"> 网站导航</a>
+				</div>
+				<p>COPYRIGHT © 1998 – 2020 TENCENT. ALL RIGHTS RESERVED.</p>
+				<div class="div6">
+					<a class="a6" href="#">腾讯公司 版权所有</a>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/check.js"></script>
+<script>
+    
+    // 获取购物车的信息
+function getCar(){
+    // 从cookie中获取当前登录的用户名
+    // let username = getCookie();
+    let username = "张三疯";
+    $.get("php/getShoppingCart.php",{
+        "vipName":username
+    },function(data){
+        showCar(data);
+        addEvent();
+    },"json");
+}
+
+// 显示购物车的商品（动态产生html（dom））
+function showCar(data){
+    let htmlStr=`
+                <tr>
+                    <td>
+                        <input type="checkbox" >
+                    </td>
+                    <td>编号</td>
+                    <td>商品信息</td>
+                    <td>单价（元）</td>
+                    <td>数量</td>
+                    <td>金额（元）</td>
+                    <td>操作</td>
+                </tr>
+            `;
+        data.forEach(goods => {
+            htmlStr +=`
+              <tr goodsId="${goods.goodsId}">
+                    <td>
+                        <input type="checkbox" >
+                    </td>
+                    <td>${goods.goodsId}</td>
+                    <td>
+                        <span>${goods.goodsName}</span>
+                       <img src="${goods.goodsImg}">
+                        </td>
+                    <td>${goods.goodsPrice}</td>
+                    <td>
+                            <input type="button" class="reduceBtn" value="-">
+                            <span>${goods.goodsCount}</span>
+                            <input type="button" class="addBtn" value="+">
+                    </td>
+                    <td>${goods.goodsPrice*goods.goodsCount}</td>
+                    <td>
+                        <input  class="delBtn" type="button" value="删除">
+                    </td>
+                </tr>
+            `;
+        });
+    
+        htmlStr+=`
+                <tr>
+                    <td colspan="8" style="text-align: center" >
+                        总金额：<span>0</span>
+                    </td>
+                </tr>
+                `;
+        $("#box").html(htmlStr);
+}
+
+
+function addEvent(){
+     // 全选，反选的插件
+     $("table :checkbox:eq(0)").check($("table :checkbox:gt(0)"));
+    // 复选框点击后计算总金额
+    $(":checkbox").click(function(){
+        totalMoney();
+    });
+    // 加法
+    $(".addBtn").width(30);
+    $(".addBtn").height(30);
+    $(".addBtn").click(function(){
+        // 数量
+        let count = $(this).prev().html();
+        count++;
+
+         // 从cookie中获取当前登录的用户名
+        // let username = getCookie();
+        let username = "张三疯";
+        let goodsId = $(this).parent().parent().attr("goodsid");
+        $.get("./php/updateGoodsCount.php",{
+            vipName:username,
+            goodsId,
+            goodsCount:count
+        },data=>{
+            if(data=="1"){
+                $(this).prev().html(count);
+                // 单价
+                let price = $(this).parent().prev().html();
+                // 计算金额
+                let money = price*count;
+                $(this).parent().next().html(money);
+                // 总金额
+                totalMoney();
+            }else{
+                alert("数量改变失败！");
+            }
+        })
+    });
+    // 减法
+    $(".reduceBtn").width(30);
+    $(".reduceBtn").height(30);
+    $(".reduceBtn").click(function(){
+        // 数量
+        let count = $(this).next().html();
+        count--;
+        if(count<1){
+            count=0;
+        }
+        $(this).next().html(count);
+        // 单价
+        let price = $(this).parent().prev().html();
+        // 计算金额
+        let money = price*count;
+        $(this).parent().next().html(money);
+
+        // 同时改变当前行的复选框的状态
+        if(count==0){
+            $(this).parent().parent().find(":checkbox").prop("checked",false);
+            // $(this).parent().parent().remove();
+        }
+
+        // 总金额
+        totalMoney();
+    });
+
+    // 删除
+    $(".delBtn").width(60);
+    $(".delBtn").height(20);
+    $(".delBtn").css( {"color":"white","background":"red"});
+    $(".delBtn").click(function(){
+        if(confirm("亲，您真的要删除吗？")){
+            // 从cookie中获取当前登录的用户名
+            // let username = getCookie();
+            let username = "张三疯";
+            let goodsId = $(this).parent().parent().attr("goodsid");
+            // 先删除后端
+            $.get("./php/deleteGoods.php",{
+                vipName:username,
+                goodsId
+            },data=>{
+                if(data=="1"){   
+                    // 后端删除成功后，再删除前端
+                    $(this).parent().parent().remove();
+                    totalMoney();
+                }else{
+                    alert("删除失败!");
+                }
+            })
+        }
+    });
+}
+
+$(function(){
+    getCar();
+
+})
+// 感觉用户体验不怎么好，
+// 其实应该点击 + 或者 - 的时候或者点击选框的弟弟们任何一个时就触发选框的事件，
+// - 到 0 的时候就不选中选框了
+
+// 计算总金额
+function totalMoney(){
+    // 
+    let money =0;
+    let $tr = $("table tr:gt(0)").not("table tr:last");
+    $tr.each(function(){
+        // 复选框是不是选中了
+        if($(this).find(":checkbox").prop("checked")){
+            money += parseFloat($(this).find("td").eq(5).html());
+        }
+    });
+    $("table tr:last").find("span").html(money);    
+}
+
+</script>
